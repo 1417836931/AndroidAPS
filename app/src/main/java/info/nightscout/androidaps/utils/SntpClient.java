@@ -96,7 +96,7 @@ public class SntpClient {
 
     void doNtpTime(final Callback callback) {
         aapsLogger.debug("Time detection started");
-        callback.success = requestTime("time.google.com", 5000);
+        callback.success = requestTime("time.windows.com", 5000);
         callback.time = getNtpTime() + SystemClock.elapsedRealtime() - getNtpTimeReference();
         aapsLogger.debug("Time detection ended: " + callback.success + " " + dateUtil.dateAndTimeString(getNtpTime()));
         callback.run();
