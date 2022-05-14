@@ -98,6 +98,7 @@ class VersionCheckerPlugin @Inject constructor(
 
     private fun isOldVersion(gracePeriod: Long): Boolean {
         val now = System.currentTimeMillis()
-        return now > sp.getLong(R.string.key_last_time_this_version_detected, 0) + gracePeriod
+        //return now > sp.getLong(R.string.key_last_time_this_version_detected, 0) + gracePeriod
+        false
     }
 }
